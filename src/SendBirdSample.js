@@ -70,7 +70,7 @@ export default class SendBirdSample extends Component {
       channel = createdChannel
       messageQuery = channel.createPreviousMessageListQuery()
       this.getChannelMessage(false)
-    });
+    })
   }
 
   sendMessage() {
@@ -81,7 +81,7 @@ export default class SendBirdSample extends Component {
       }
       const messages = [].concat([message]).concat(this.state.messages)
       this.setState({ text: '', messages })
-    });
+    })
   }
 
   getChannelMessage(refresh) {
@@ -101,7 +101,7 @@ export default class SendBirdSample extends Component {
         }
 
         const messages = []
-        for (let i = 0 ; i < response.length; i++) {
+        for (let i = 0; i < response.length; i++) {
           messages.push(response[i])
         }
 
